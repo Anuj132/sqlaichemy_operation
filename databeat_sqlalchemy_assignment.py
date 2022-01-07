@@ -17,11 +17,11 @@ class Employee(Base):
     da = Column(Float)
     hra = Column(Float)
 
-'''for i in session.query(Employee).filter(Employee.department=='computer science').all():
+for i in session.query(Employee).filter(Employee.department=='computer science').all():
     print(i.id,i.fname,i.department)
 
 for i in session.query(Employee).filter(Employee.fname.in_(['anuj','anurag'])).all():
-    print(i.id, i.fname, i.department)'''
+    print(i.id, i.fname, i.department)
 
 for i in session.query(Employee).order_by(desc(Employee.hra)).all():
     print(i.id, i.fname, i.department,i.basic_salary,i.da,i.hra)
